@@ -97,3 +97,29 @@ body {
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
+
+@media only screen and (max-width: 600px) {  
+  .container {
+    width: 100%; 
+  }
+  #level-title1 {
+    font-size: 3vw;
+  }
+  #level-title2 {
+    font-size: 3vw;
+    margin-bottom: 5%;
+  }
+  .btn {
+    height: 30vw;
+    width: 30vw;
+  }
+  .footer {
+    font-size: 2vw;
+  }
+  .start {
+    font-size: 3vw;
+    padding: 3vw 5vw;
+    margin: 5%;
+    height: auto;
+  }
+}

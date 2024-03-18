@@ -1,67 +1,58 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Discount</title>
+    <link rel="icon" type="image/x-icon" href="/images/logo.png" />
 
-<head>
+    <!-- CSS Stylesheets -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
 
-  <meta charset="utf-8">
-  <title>Discount</title>
-  <link rel="icon" type="image/x-icon" href="/images/logo.png">
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Press+Start+2P"
+      rel="stylesheet"
+    />
+  </head>
 
-  <!-- CSS Stylesheets -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/styles.css">
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
-
-</head>
-
-<body>
-  <h1 id="level-title1">Get the discount</h1>
-  <h2 id="level-title2">Press Button to Start Game</h2>
-  <div class="container">
-
-    <div class="row">
-
-      <div class="col-sm">
-
-        <div type="button" id="green" class="btn green"></div>
-
-        <div type="button" id="red" class="btn red"></div>
-
-      </div>
-
-    </div>
-
-    <div class="row">
-
-      <div class="col-sm">
-
-        <div type="button" id="yellow" class="btn yellow"></div>
-
-        <div type="button" id="blue" class="btn blue"></div>
-
-      </div>
-
-    </div>
-
-    <!-- button start game -->
-
+  <body>
+    <h1 id="level-title1">Get the discount</h1>
+    <h2 id="level-title2">Press Button to Start Game</h2>
     <div class="container">
-        
+      <div class="row">
         <div class="col-sm">
-  
-          <div type="button" id="start" class="btn start">Start</button>
-  
-        </div>
-    </div>
+          <div type="button" id="green" class="btn green"></div>
 
-      <footer class="footer">
-        Made with ❤️ in GDSC.
-      </footer>
+          <div type="button" id="red" class="btn red"></div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm">
+          <div type="button" id="yellow" class="btn yellow"></div>
+
+          <div type="button" id="blue" class="btn blue"></div>
+        </div>
+      </div>
+
+      <!-- button start game -->
+
+      <div class="container">
+        <div class="col-sm">
+          <div type="button" id="start" class="btn start">Start</div>
+        </div>
+      </div>
+
+      <footer class="footer">Made with ❤️ in GDSC.</footer>
 
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
       <script src="js/game.js"></script>
-</body>
-
+    </div>
+  </body>
 </html>
