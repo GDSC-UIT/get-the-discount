@@ -71,3 +71,29 @@ body {
   box-shadow: 0 0 20px white;
   background-color: grey;
 }
+
+.start {
+  display: inline-block;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 20px;
+  width: auto;
+  height: auto;
+  color: #e8eaed;
+  background-color: #202124;
+  padding: 20px 25px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0px 9px #999;
+}
+
+.start:hover {background-color: #3d3f44}
+
+.start:active {
+  background-color: #000000;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
