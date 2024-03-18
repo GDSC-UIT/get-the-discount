@@ -36,11 +36,14 @@ var level = 0;
 var discount = 0;
 
 //6. Use jQuery to detect when a keyboard key has been pressed, when that happens for the first time, call nextSequence().
-$(document).keypress(function () {
+$(".start").click(function () {
   if (!started) {
     //7. The h1 title starts out saying "Press A Key to Start", when the game has started, change this to say "Level 0".
     $("#level-title2").text("Level " + level);
     $("#level-title1").text("Your Discount Is: " + discount + "%");
+
+    // hide the start button
+    $(".start").hide();
     nextSequence();
     started = true;
   }
@@ -54,6 +57,15 @@ $( "p" ).click(function() {
 
 //8. Use jQuery to detect when any of the buttons are clicked and trigger a handler function.
 $(".btn").click(function () {
+  // check if start button clicked
+  if ("start" === $(this).attr("id")) {
+    return;
+  }
+
+  if (!started) {
+    return;
+  }
+
   //9. Inside the handler, create a new variable called userChosenColour to store the id of the button that got clicked.
   var userChosenColour = $(this).attr("id");
 
@@ -87,7 +99,7 @@ function checkAnswer(currentLevel) {
     // console.log("wrong");
 
     //16. In the sounds folder, there is a sound called wrong.mp3, play this sound if the user got one of the answers wrong.
-    playSound("wrong");
+    playSound("game-over");
 
     //17. In the styles.css file, there is a class called "game-over", apply this class to the body of the website when the user gets one of the answers wrong and then remove it after 200 milliseconds.
     $("body").addClass("game-over");
@@ -96,8 +108,10 @@ function checkAnswer(currentLevel) {
     }, 200);
 
     //18. Change the h1 title to say "Game Over, Press Any Key to Restart" if the user got the answer wrong.
-    $("#level-title2").text("Game Over, Press Any Keyboard Key to Restart");
+    $("#level-title2").text("Game Over, Press Restart Button to Play Again");
     $("#level-title1").text("Your Discount Is: " + discount + "%");
+    $(".start").text("Restart");
+    $(".start").show();
 
     //19. Call startOver() if the user gets the sequence wrong.
     startOver();
